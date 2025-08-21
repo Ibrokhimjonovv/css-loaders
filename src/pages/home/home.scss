@@ -1,0 +1,95 @@
+#home {
+  h2 {
+    color: #e0e3e7;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 24px;
+  }
+
+  p {
+    text-align: center;
+    margin-top: 20px;
+
+    code {
+      background-color: rgb(26, 30.5, 40.25);
+      padding: 6px;
+      border-radius: 5px;
+      letter-spacing: 1.1px;
+      color: #8891a4;
+    }
+  }
+
+  .random-css-loader {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .random-loader-case {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        height: 200px;
+        background-color: #1b2832;
+        border: none;
+        margin-top: 20px;
+        border-radius: 5px;
+        position: relative;
+        cursor: pointer;
+
+        &:hover {
+            .random-copy-btn {
+                opacity: 1;
+            }
+        }
+
+        .random-copy-btn {
+            cursor: pointer;
+            position: absolute;
+            z-index: 9;
+            padding: 13px;
+            font-size: 15px;
+            background-color: #017fc0;
+            border-radius: 5px;
+            border: none;
+            color: #fff;
+            font-weight: 500;
+            opacity: 0;
+        }
+    }
+
+    /* HTML: <div class="loader"></div> */
+    .random-loader-home,
+    .random-loader-home:before,
+    .random-loader-home:after {
+      width: 35px;
+      aspect-ratio: 1;
+      box-shadow: 0 0 0 3px inset #fff;
+      position: relative;
+      animation: l6 1.5s infinite 0.5s;
+    }
+    .random-loader-home:before,
+    .random-loader-home:after {
+      content: "";
+      position: absolute;
+      left: calc(100% + 5px);
+      animation-delay: 1s;
+    }
+    .random-loader-home:after {
+      left: -40px;
+      animation-delay: 0s;
+    }
+    @keyframes l6 {
+      0%,
+      55%,
+      100% {
+        border-radius: 0;
+      }
+      20%,
+      30% {
+        border-radius: 50%;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.3s;
+}
+
+
+body {
+  background-color: #131720;
+  color: #b3b9c5;
+}
+
+.container {
+  display: flex;
+  max-height: 100vh;
+  overflow: hidden;
+
+  .for-left-menu {
+    overflow-x: hidden;
+    width: 230px;
+  }
+
+  .app-menu {
+    width: calc(100% - 230px);
+  }
+}
