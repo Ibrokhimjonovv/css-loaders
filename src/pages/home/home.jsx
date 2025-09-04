@@ -54,8 +54,8 @@ const Home = () => {
             </p>
 
             <div className="random-css-loader">
-                Don't know which loader to use?
-                Here is one for you 👇
+                <p id='sss'>Don't know which loader to use?
+                Here is one for you 👇</p>
 
                 <div className="random-loader-case">
                     <button className="random-copy-btn" onClick={handleCopy}>

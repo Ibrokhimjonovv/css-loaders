@@ -8,7 +8,6 @@
   transition: all 0.3s;
 }
 
-
 body {
   background-color: #131720;
   color: #b3b9c5;
@@ -18,14 +17,29 @@ body {
   display: flex;
   max-height: 100vh;
   overflow: hidden;
-  
+
   .for-left-menu {
     overflow-x: hidden;
     width: 230px;
   }
-  
+
   .app-menu {
     overflow: auto;
     width: calc(100% - 230px);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+
+    .for-left-menu {
+      width: 200px;
+      position: fixed;
+      z-index: 99;
+    }
+
+    .app-menu {
+      width: 100%;
+    }
   }
 }

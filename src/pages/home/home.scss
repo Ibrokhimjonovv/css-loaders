@@ -100,3 +100,25 @@
     padding: 10px;
   }
 }
+
+
+
+@media screen and (max-width: 500px) {
+  #home {
+    padding: 10px 20px;
+
+    h2 {
+      margin-top: 20px;
+    }
+
+    .random-css-loader {
+      margin-top: 30px;
+      p {
+        text-align: center;
+        &#sss {
+          margin-top: 0 !important;
+        }
+      }
+    }
+  }
+}

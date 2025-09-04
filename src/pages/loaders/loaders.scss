@@ -1,4 +1,4 @@
-#dots {
+#classic {
   padding: 50px;
   display: flex;
   flex-direction: column;
@@ -55,6 +55,11 @@
       position: relative;
       border: none;
       border-radius: 5px;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000;
 
       &:hover {
         .copy-btn {
@@ -97,36 +102,42 @@
         justify-content: center;
       }
 
-      .dots-loader {
+      .classic-loader {
         margin: 0 auto;
       }
 
       /* HTML: <div class="loader"></div> */
-      .dots-l1 {
-        width: 60px;
-        aspect-ratio: 4;
-        background: radial-gradient(circle closest-side, #000 90%, #0000) 0 /
-          calc(100% / 3) 100% space;
-        clip-path: inset(0 100% 0 0);
-        animation: l1 1s steps(4) infinite;
+      .classic-l1 {
+        font-weight: bold;
+        font-family: sans-serif;
+        font-size: 30px;
+        animation: classic-l1 1s linear infinite alternate;
       }
-      @keyframes l1 {
+      .classic-l1:before {
+        content: "Loading...";
+      }
+      @keyframes classic-l1 {
         to {
-          clip-path: inset(0 -34% 0 0);
+          opacity: 0;
         }
       }
 
       /* HTML: <div class="loader"></div> */
-      .dots-l2 {
-        width: 60px;
-        aspect-ratio: 4;
-        background: radial-gradient(circle closest-side, #000 90%, #0000) 0 /
-          calc(100% / 3) 100% no-repeat;
-        animation: l2 1s steps(3) infinite;
+      .classic-l2 {
+        width: fit-content;
+        font-weight: bold;
+        font-family: sans-serif;
+        font-size: 30px;
+        padding-bottom: 8px;
+        background: linear-gradient(currentColor 0 0) 0 100%/0% 3px no-repeat;
+        animation: classic-l2 2s linear infinite;
       }
-      @keyframes l2 {
+      .classic-l2:before {
+        content: "Loading...";
+      }
+      @keyframes classic-l2 {
         to {
-          background-position: 150%;
+          background-size: 100% 3px;
         }
       }
     }
@@ -137,5 +148,35 @@
     // background-color: red;
     min-height: 200px;
     padding: 10px;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  #classic {
+    padding: 20px;
+
+    .top-line {
+      flex-direction: column;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .bottom-line {
+      margin-top: 20px;
+      flex-wrap: wrap;
+      display: flex;
+      justify-content: center;
+
+      .loader-btn {
+        width: 90%;
+      }
+    }
   }
 }

@@ -1,39 +1,87 @@
 #left-menu {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 
-    ul {
-        li {
-            a {
-                display: flex;
-                justify-content: space-between;
-                padding: 14px 10px;
-                border-bottom: 1px solid #202632;
-                color: #b3b9c5;
+  ul {
+    li {
+      a {
+        display: flex;
+        justify-content: space-between;
+        padding: 14px 10px;
+        border-bottom: 1px solid #202632;
+        color: #b3b9c5;
 
-                &.active {
-                    background-color: rgb(1 170 255 / 19%);
-                    color: #79c0ff;
-                }
-
-                &:hover {
-                    background-color: rgb(1 170 255 / 19%);
-                    color: #79c0ff;
-                    
-                    span {
-                        &:first-child {
-                            text-decoration: underline;
-                        }
-                    }
-                }
-
-                span {
-                    &:last-child {
-                        font-size: 14px;
-                        font-weight: 600;
-                    }
-                }
-            }
+        &.active {
+          background-color: rgb(1 170 255 / 19%);
+          color: #79c0ff;
         }
+
+        &:hover {
+          background-color: rgb(1 170 255 / 19%);
+          color: #79c0ff;
+
+          span {
+            &:first-child {
+              text-decoration: underline;
+            }
+          }
+        }
+
+        span {
+          &:last-child {
+            font-size: 14px;
+            font-weight: 600;
+          }
+        }
+      }
     }
+  }
+}
+.toggle-btn {
+  position: fixed;
+  bottom: 100px;
+  left: 200px;
+  background-color: #202632;
+  width: 50px;
+  height: 50px;
+  z-index: 999;
+  border-radius: 0 15px 15px 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 5px;
+  border: 2px solid blue;
+  border-left: 0;
+
+  span {
+    width: 70%;
+    height: 5px;
+    display: flex;
+    background-color: #fff;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .toggle-btn {
+    display: flex;
+    left: 0;
+
+    &.active {
+      left: 200px;
+    }
+  }
+  #left-menu {
+    background-color: #202632;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: 200px;
+    height: 100vh;
+    overflow: auto;
+
+    &.active {
+      left: 0;
+    }
+  }
 }
