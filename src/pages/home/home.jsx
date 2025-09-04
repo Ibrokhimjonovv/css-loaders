@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./home.scss";
-import YandexAd1 from '../../components/yandexAd/ad';
+import YandexAd from '../../components/yandexAd/ad';
 
 const Home = () => {
     const [copyText, setCopyText] = useState(false);
@@ -67,7 +67,7 @@ const Home = () => {
                 </div>
             </div>
             <div className="ad1-block">
-                <YandexAd1 />
+                <YandexAd blockId="R-A-17095066-1"/>
             </div>
         </div>
     )

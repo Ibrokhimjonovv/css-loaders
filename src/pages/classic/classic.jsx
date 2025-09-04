@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./classic.scss";
+import YandexAd from "../../components/yandexAd/ad";
 
 const loaders = [
     {
@@ -73,6 +74,7 @@ const Classic = () => {
                     <button key={loader.id} className="loader-btn">
                         <button
                             className="copy-btn"
+                            onClick={() => handleCopy(loader.css, loader.id)}
                         >
                             {copiedId === loader.id ? "Copied!" : "Copy the CSS"}
                         </button>
@@ -82,7 +84,13 @@ const Classic = () => {
                         </div>
                         <div className={`classic-loader classic-l${loader.id}`}></div>
                     </button>
+
                 ))}
+            </div>
+
+            <div className="ad1-block">
+                <YandexAd blockId="R-A-17095066-3"
+                    renderTo="yandex_rtb_R-A-17095066-3" />
             </div>
         </div>
     );

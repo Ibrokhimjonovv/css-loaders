@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./dots.scss";
+import YandexAd from "../../components/yandexAd/ad";
 
 const loaders = [
     {
@@ -84,6 +85,11 @@ const Dots = () => {
                         <div className={`dots-loader dots-l${loader.id}`}></div>
                     </button>
                 ))}
+            </div>
+
+            <div className="ad1-block">
+                <YandexAd blockId="R-A-17095066-4" 
+  renderTo="yandex_rtb_R-A-17095066-4" />
             </div>
         </div>
     );

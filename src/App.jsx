@@ -4,10 +4,12 @@ import Home from './pages/home/home';
 import "./App.css";
 import LeftMenu from './components/left-menu/left-menu';
 import Header from './components/header/header';
-
+import YandexAd from './components/yandexAd/ad';
+import NotFound from './pages/not-found/not-found';
 function App() {
   return (
     <BrowserRouter>
+    <YandexAd blockId="R-A-17095066-2" platform="desktop"/>
       <div className="container">
         <div className="for-left-menu">
           <LeftMenu />
@@ -19,7 +21,7 @@ function App() {
             {routes.map(({ path, element }, index) => (
               <Route key={index} path={path} element={element} />
             ))}
-            <Route path="*" element={<h1>404 - Sahifa topilmadi</h1>} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
       </div>

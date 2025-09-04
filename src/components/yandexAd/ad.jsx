@@ -1,19 +1,23 @@
 'use client';
 import React, { useEffect } from 'react';
 
-const YandexAd1 = ({ blockId }) => {
+const YandexAd = ({ blockId, type, platform, renderTo }) => {
   useEffect(() => {
-    if (window.yaContextCb) {
-      window.yaContextCb.push(() => {
-        window.Ya.Context.AdvManager.render({
-          blockId,
-          renderTo: `yandex_rtb_${blockId}`,
-        });
-      });
-    }
-  }, [blockId]);
+    // Agar yo'q bo'lsa, massiv qilib yaratib qo'yamiz
+    window.yaContextCb = window.yaContextCb || [];
 
-  return <div id={`yandex_rtb_${blockId}`} />;
+    window.yaContextCb.push(() => {
+      const config = { blockId };
+
+      if (type) config.type = type;
+      if (platform) config.platform = platform;
+      config.renderTo = renderTo || `yandex_rtb_${blockId}`;
+
+      window.Ya.Context.AdvManager.render(config);
+    });
+  }, [blockId, type, platform, renderTo]);
+
+  return <div id={renderTo || `yandex_rtb_${blockId}`} />;
 };
 
-export default YandexAd1;
+export default YandexAd;

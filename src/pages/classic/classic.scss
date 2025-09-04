@@ -101,16 +101,17 @@
         margin: 0 auto;
       }
 
+      /* HTML: <div class="loader"></div> */
       .classic-l1 {
         font-weight: bold;
         font-family: sans-serif;
         font-size: 30px;
-        animation: l1 1s linear infinite alternate;
+        animation: classic-l1 1s linear infinite alternate;
       }
       .classic-l1:before {
         content: "Loading...";
       }
-      @keyframes l1 {
+      @keyframes classic-l1 {
         to {
           opacity: 0;
         }
@@ -124,16 +125,23 @@
         font-size: 30px;
         padding-bottom: 8px;
         background: linear-gradient(currentColor 0 0) 0 100%/0% 3px no-repeat;
-        animation: l2 2s linear infinite;
+        animation: classic-l2 2s linear infinite;
       }
       .classic-l2:before {
         content: "Loading...";
       }
-      @keyframes l2 {
+      @keyframes classic-l2 {
         to {
           background-size: 100% 3px;
         }
       }
     }
+  }
+
+  .ad1-block {
+    width: 100%;
+    // background-color: red;
+    min-height: 200px;
+    padding: 10px;
   }
 }
