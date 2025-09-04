@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "./home.scss";
+import YandexAd1 from '../../components/yandexAd/ad';
 
 const Home = () => {
     const [copyText, setCopyText] = useState(false);
@@ -64,6 +65,9 @@ const Home = () => {
                     </button>
                     <div className="random-loader-home loader"></div>
                 </div>
+            </div>
+            <div className="ad1-block">
+                <YandexAd1 />
             </div>
         </div>
     )
