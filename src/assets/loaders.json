@@ -34,5 +34,44 @@
     {
         "id": "bars",
         "css": ".loader-bars-2 { width: 45px; aspect-ratio: 1; background: linear-gradient(#0000 calc(1*100%/6),#000 0 calc(3*100%/6),#0000 0) left bottom, linear-gradient(#0000 calc(2*100%/6),#000 0 calc(4*100%/6),#0000 0) center bottom, linear-gradient(#0000 calc(3*100%/6),#000 0 calc(5*100%/6),#0000 0) right bottom; background-size: 20% 600%; background-repeat: no-repeat; animation: l3 1s infinite linear; } @keyframes l3 { 100% {background-position: left top,center top,right top} }"
-    }
+    },
+    {
+        "id": "dots-vs-bars",
+        "css": ".loader-dots-vs-bars-0 { width: 40px; aspect-ratio: 1; --c: linear-gradient(#000 0 0); --r1: radial-gradient(farthest-side at bottom,#000 93%,#0000); --r2: radial-gradient(farthest-side at top,#000 93%,#0000); background: var(--c),var(--r1),var(--r2), var(--c),var(--r1),var(--r2), var(--c),var(--r1),var(--r2); background-repeat: no-repeat; animation: l1-equalizer-bars 1s infinite alternate; } @keyframes l1-equalizer-bars { 0%,10% { background-size: 8px 0,8px 4px,8px 4px; background-position: 0 50%,0 calc(50% - 2px),0 calc(50% + 2px), 50% 50%,50% calc(50% - 2px),50% calc(50% + 2px), 100% 50%,100% calc(50% - 2px),100% calc(50% + 2px); } 90%,100% { background-size: 8px 100%,8px 4px,8px 4px; background-position: 0 50%,0 -2px,0 calc(100% + 2px), 50% 50%,50% -2px,50% calc(100% + 2px), 100% 50%,100% -2px,100% calc(100% + 2px); } }"
+    },
+    {
+        "id": "dots-vs-bars",
+        "css": ".loader-dots-vs-bars-1 { width: 40px; aspect-ratio: 1; --c: linear-gradient(#000 0 0); --r1: radial-gradient(farthest-side at bottom,#000 93%,#0000); --r2: radial-gradient(farthest-side at top,#000 93%,#0000); background: var(--c),var(--r1),var(--r2), var(--c),var(--r1),var(--r2), var(--c),var(--r1),var(--r2); background-repeat: no-repeat; animation: l2-wave-bars 1s infinite alternate; } @keyframes l2-wave-bars { 0%,25% { background-size: 8px 0,8px 4px,8px 4px, 8px 0,8px 4px,8px 4px, 8px 0,8px 4px,8px 4px; background-position: 0 50%,0 calc(50% - 2px),0 calc(50% + 2px), 50% 50%,50% calc(50% - 2px),50% calc(50% + 2px), 100% 50%,100% calc(50% - 2px),100% calc(50% + 2px); } 50% { background-size: 8px 100%,8px 4px,8px 4px, 8px 0,8px 4px,8px 4px, 8px 0,8px 4px,8px 4px; background-position: 0 50%,0 calc(0% - 2px),0 calc(100% + 2px), 50% 50%,50% calc(50% - 2px),50% calc(50% + 2px), 100% 50%,100% calc(50% - 2px),100% calc(50% + 2px); } 75% { background-size: 8px 100%,8px 4px,8px 4px, 8px 100%,8px 4px,8px 4px, 8px 0,8px 4px,8px 4px; background-position: 0 50%,0 calc(0% - 2px),0 calc(100% + 2px), 50% 50%,50% calc(0% - 2px),50% calc(100% + 2px), 100% 50%,100% calc(50% - 2px),100% calc(50% + 2px); } 95%,100% { background-size: 8px 100%,8px 4px,8px 4px, 8px 100%,8px 4px,8px 4px, 8px 100%,8px 4px,8px 4px; background-position: 0 50%,0 calc(0% - 2px),0 calc(100% + 2px), 50% 50%,50% calc(0% - 2px),50% calc(100% + 2px), 100% 50%,100% calc(0% - 2px),100% calc(100% + 2px); } }"
+    },
+    {
+        "id": "dots-vs-bars",
+        "css": ".loader-dots-vs-bars-2 { width: 40px; height: 26px; --c:no-repeat linear-gradient(#000 0 0); background: var(--c) 0 100%, var(--c) 50% 100%, var(--c) 100% 100%; background-size: 8px calc(100% - 4px); position: relative; } .loader-dots-vs-bars-2:before { content: \"\"; position: absolute; width: 8px; height: 8px; border-radius: 50%; background: #000; left: 0; top: 0; animation: l3-1-bouncing 1.5s linear infinite alternate, l3-2-bouncing 0.75s cubic-bezier(0,200,.8,200) infinite; } @keyframes l3-1-bouncing { 100% { left: calc(100% - 8px); } } @keyframes l3-2-bouncing { 100% { top: -0.1px; } }"
+    },
+    {
+        "id": "spinner",
+        "css": ".loader-spinner-0 { width: 50px; aspect-ratio: 1; border-radius: 50%; border: 8px solid; border-color: #000 #0000; animation: l1-rotating-ring 1s infinite; } @keyframes l1-rotating-ring { to { transform: rotate(.5turn); } }"
+    },
+    {
+        "id": "spinner",
+        "css": ".loader-spinner-1 { width: 50px; aspect-ratio: 1; border-radius: 50%; border: 8px solid lightblue; border-right-color: orange; animation: l2-dual-color-spinner 1s infinite linear; } @keyframes l2-dual-color-spinner { to { transform: rotate(1turn); } }"
+    },
+    {
+        "id": "spinner",
+        "css": ".loader-spinner-2 { width: 50px; padding: 8px; aspect-ratio: 1; border-radius: 50%; background: #25b09b; --_m: conic-gradient(#0000 10%,#000), linear-gradient(#000 0 0) content-box; -webkit-mask: var(--_m); mask: var(--_m); -webkit-mask-composite: source-out; mask-composite: subtract; animation: l3-cutout-spinner 1s infinite linear; } @keyframes l3-cutout-spinner { to { transform: rotate(1turn); } }"
+    },
+    {
+        "id": "shape",
+        "css": ".loader-shape-0 { width: 40px; aspect-ratio: 1; border-radius: 50%; background: #f03355; clip-path: polygon(0 0,100% 0,100% 100%,0 100%); animation: l1-shape-morphing 2s infinite cubic-bezier(0.3,1,0,1); } @keyframes l1-shape-morphing { 33% { border-radius: 0; background: #514b82; clip-path: polygon(0 0,100% 0,100% 100%,0 100%); } 66% { border-radius: 0; background: #ffa516; clip-path: polygon(50% 0,50% 0,100% 100%,0 100%); } }"
+    },
+    {
+    "id": "shape",
+    "css": ".loader-shape-1 { width: 40px; aspect-ratio: 1; background: #25b09b; clip-path: polygon(0 0,100% 0,100% 100%); animation: l2-polygon-clip 2s infinite cubic-bezier(0.3,1,0,1); } @keyframes l2-polygon-clip { 25% { clip-path: polygon(0 0,100% 0,0 100%); } 50% { clip-path: polygon(0 0,100% 100%,0 100%); } 75% { clip-path: polygon(100% 0,100% 100%,0 100%); } 100% { clip-path: polygon(100% 0,100% 100%,0 0); } }"
+    },
+    {
+  "id": "shape",
+  "css": ".loader-shape-2 { width: 40px; height: 40px; color: #f03355; background: conic-gradient(from -45deg at top 20px left 50%, #0000, currentColor 1deg 90deg, #0000 91deg), conic-gradient(from 45deg at right 20px top 50%, #0000, currentColor 1deg 90deg, #0000 91deg), conic-gradient(from 135deg at bottom 20px left 50%, #0000, currentColor 1deg 90deg, #0000 91deg), conic-gradient(from -135deg at left 20px top 50%, #0000, currentColor 1deg 90deg, #0000 91deg); animation: l4-rotating-heart 1.5s infinite cubic-bezier(0.3,1,0,1); } @keyframes l4-rotating-heart { 50% { width: 60px; height: 60px; transform: rotate(180deg); } 100% { transform: rotate(360deg); } }"
+}
+
+
+
 ]
