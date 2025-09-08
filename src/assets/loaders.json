@@ -60,17 +60,102 @@
         "css": ".loader-spinner-2 { width: 50px; padding: 8px; aspect-ratio: 1; border-radius: 50%; background: #25b09b; --_m: conic-gradient(#0000 10%,#000), linear-gradient(#000 0 0) content-box; -webkit-mask: var(--_m); mask: var(--_m); -webkit-mask-composite: source-out; mask-composite: subtract; animation: l3-cutout-spinner 1s infinite linear; } @keyframes l3-cutout-spinner { to { transform: rotate(1turn); } }"
     },
     {
-        "id": "shape",
-        "css": ".loader-shape-0 { width: 40px; aspect-ratio: 1; border-radius: 50%; background: #f03355; clip-path: polygon(0 0,100% 0,100% 100%,0 100%); animation: l1-shape-morphing 2s infinite cubic-bezier(0.3,1,0,1); } @keyframes l1-shape-morphing { 33% { border-radius: 0; background: #514b82; clip-path: polygon(0 0,100% 0,100% 100%,0 100%); } 66% { border-radius: 0; background: #ffa516; clip-path: polygon(50% 0,50% 0,100% 100%,0 100%); } }"
+        "id": "shapes",
+        "css": ".loader-shapes-0 { width: 40px; aspect-ratio: 1; border-radius: 50%; background: #f03355; clip-path: polygon(0 0,100% 0,100% 100%,0 100%); animation: l1-shape-morphing 2s infinite cubic-bezier(0.3,1,0,1); } @keyframes l1-shape-morphing { 33% { border-radius: 0; background: #514b82; clip-path: polygon(0 0,100% 0,100% 100%,0 100%); } 66% { border-radius: 0; background: #ffa516; clip-path: polygon(50% 0,50% 0,100% 100%,0 100%); } }"
     },
     {
-    "id": "shape",
-    "css": ".loader-shape-1 { width: 40px; aspect-ratio: 1; background: #25b09b; clip-path: polygon(0 0,100% 0,100% 100%); animation: l2-polygon-clip 2s infinite cubic-bezier(0.3,1,0,1); } @keyframes l2-polygon-clip { 25% { clip-path: polygon(0 0,100% 0,0 100%); } 50% { clip-path: polygon(0 0,100% 100%,0 100%); } 75% { clip-path: polygon(100% 0,100% 100%,0 100%); } 100% { clip-path: polygon(100% 0,100% 100%,0 0); } }"
+        "id": "shapes",
+        "css": ".loader-shapes-1 { width: 40px; aspect-ratio: 1; background: #25b09b; clip-path: polygon(0 0,100% 0,100% 100%); animation: l2-polygon-clip 2s infinite cubic-bezier(0.3,1,0,1); } @keyframes l2-polygon-clip { 25% { clip-path: polygon(0 0,100% 0,0 100%); } 50% { clip-path: polygon(0 0,100% 100%,0 100%); } 75% { clip-path: polygon(100% 0,100% 100%,0 100%); } 100% { clip-path: polygon(100% 0,100% 100%,0 0); } }"
     },
     {
-  "id": "shape",
-  "css": ".loader-shape-2 { width: 40px; height: 40px; color: #f03355; background: conic-gradient(from -45deg at top 20px left 50%, #0000, currentColor 1deg 90deg, #0000 91deg), conic-gradient(from 45deg at right 20px top 50%, #0000, currentColor 1deg 90deg, #0000 91deg), conic-gradient(from 135deg at bottom 20px left 50%, #0000, currentColor 1deg 90deg, #0000 91deg), conic-gradient(from -135deg at left 20px top 50%, #0000, currentColor 1deg 90deg, #0000 91deg); animation: l4-rotating-heart 1.5s infinite cubic-bezier(0.3,1,0,1); } @keyframes l4-rotating-heart { 50% { width: 60px; height: 60px; transform: rotate(180deg); } 100% { transform: rotate(360deg); } }"
+        "id": "shapes",
+        "css": ".loader-shapes-2 { width: 40px; height: 40px; color: #f03355; background: conic-gradient(from -45deg at top 20px left 50%, #0000, currentColor 1deg 90deg, #0000 91deg), conic-gradient(from 45deg at right 20px top 50%, #0000, currentColor 1deg 90deg, #0000 91deg), conic-gradient(from 135deg at bottom 20px left 50%, #0000, currentColor 1deg 90deg, #0000 91deg), conic-gradient(from -135deg at left 20px top 50%, #0000, currentColor 1deg 90deg, #0000 91deg); animation: l4-rotating-heart 1.5s infinite cubic-bezier(0.3,1,0,1); } @keyframes l4-rotating-heart { 50% { width: 60px; height: 60px; transform: rotate(180deg); } 100% { transform: rotate(360deg); } }"
+    },
+    {
+        "id": "polygons",
+        "css": ".loader-polygons-0 { display: inline-grid; width: 90px; aspect-ratio: 1; clip-path: polygon(100% 50%,85.36% 85.36%,50% 100%,14.64% 85.36%,0% 50%,14.64% 14.64%,50% 0%,85.36% 14.64%); background: #574951; animation: l1-rotating-hexagon 6s infinite linear; } .loader-hexagon:before, .loader-hexagon:after { content: \"\"; grid-area: 1/1; background: #83988E; clip-path: inherit; margin: 10%; animation: inherit; animation-duration: 12s; } .loader-hexagon:after { background: #BCDEA5; margin: 20%; animation-duration: 18s; } @keyframes l1-rotating-hexagon { to { rotate: 1turn; } }"
+    },
+    {
+        "id": "polygons",
+        "css": ".loader-polygons-1 { display: inline-grid; width: 90px; aspect-ratio: 1; animation: l3-0 5s steps(10) infinite; } .loader-polygons-1:before, .loader-polygons-1:after { content: \"\"; grid-area: 1/1; } .loader-polygons-1:before { clip-path: polygon(100% 50%,90.45% 79.39%,65.45% 97.55%,34.55% 97.55%,9.55% 79.39%,0% 50%,9.55% 20.61%,34.55% 2.45%,65.45% 2.45%,90.45% 20.61%,100% 50%,85.6% 24.14%,63.6% 8.15%,36.4% 8.15%,14.4% 24.14%,6% 50%,14.4% 75.86%,36.4% 91.85%,63.6% 91.85%,85.6% 75.86%,94% 50%,85.6% 24.14%); background: #574951; } .loader-polygons-1:after { background: #83988E; clip-path: polygon(100% 50%,65.45% 97.55%,9.55% 79.39%,9.55% 20.61%,65.45% 2.45%); margin: 27%; translate: 46% 0; transform-origin: right; animation: l3-1 .5s linear infinite; } @keyframes l3-0 { to { rotate: 1turn; } } @keyframes l3-1 { 0% { rotate: 18deg; } to { rotate: -18deg; } }"
+    },
+    {
+        "id": "polygons",
+        "css": ".loader-polygons-2 { display: inline-grid; width: 90px; aspect-ratio: 1; clip-path: polygon(100% 50%,85.36% 85.36%,50% 100%,14.64% 85.36%,0% 50%,14.64% 14.64%,50% 0%,85.36% 14.64%); background: #574951; animation: l2-rotate 6s infinite linear; } .loader-polygons-2:before, .loader-polygons-2:after { content: \"\"; grid-area: 1/1; background: #83988E; clip-path: polygon(100% 50%,81.17% 89.09%,38.87% 98.75%,4.95% 71.69%,4.95% 28.31%,38.87% 1.25%,81.17% 10.91%); margin: 10%; animation: inherit; animation-duration: 10s; } .loader-polygons-2:after { background: #BCDEA5; clip-path: polygon(100% 50%,75% 93.3%,25% 93.3%,0% 50%,25% 6.7%,75% 6.7%); margin: 20%; animation-duration: 3s; animation-direction: reverse; } @keyframes l2-rotate { to { rotate: 1turn; } }"
+    },
+    {
+        "id": "3-D",
+        "css": ".loader-3-D-0 { --s: 25px; --_d: calc(0.353*var(--s)); width: calc(var(--s) + var(--_d)); aspect-ratio: 1; clip-path: polygon(var(--_d) 0,100% 0,100% calc(100% - var(--_d)),calc(100% - var(--_d)) 100%,0 100%,0 var(--_d)); background: conic-gradient(from -90deg at var(--s) var(--_d), #fff 135deg,#666 0 270deg,#aaa 0); animation: l1-conic 1s infinite cubic-bezier(0.5,300,0.5,-300); } @keyframes l1-conic { 50%,100% { transform: translateY(0.1px); } }"
+    },
+    {
+        "id": "3-D",
+        "css": ".loader-3-D-1 { --s: 25px; --_d: calc(0.353*var(--s)); width: calc(var(--s) + var(--_d)); aspect-ratio: 1; display: grid; filter: drop-shadow(0 0 0 #fff); animation: l2-glow 0.8s infinite; } .loader-3-D-1:before { content: \"\"; clip-path: polygon(var(--_d) 0,100% 0,100% calc(100% - var(--_d)),calc(100% - var(--_d)) 100%,0 100%,0 var(--_d)); background: conic-gradient(from -90deg at var(--s) var(--_d), #fff 135deg,#666 0 270deg,#aaa 0); } @keyframes l2-glow { 50% { filter: drop-shadow(0 0 5px #fff); } }"
+    },
+    {
+        "id": "3-D",
+        "css": ".loader-3-D-2 { --s: 25px; --_d: calc(0.353*var(--s)); height: calc(var(--s) + var(--_d)); aspect-ratio: 1; display: grid; } .loader-3-D-2:before { content: \"\"; height: 100%; margin: auto 0; clip-path: polygon(var(--_d) 0,100% 0,100% calc(100% - var(--_d)),calc(100% - var(--_d)) 100%,0 100%,0 var(--_d)); background: conic-gradient(from -90deg at var(--s) var(--_d), #fff 135deg,#666 0 270deg,#aaa 0); animation: l3-scale .8s infinite alternate; } @keyframes l3-scale { 100% { height: 40%; } }"
+    },
+    {
+        "id": "progress",
+        "css": ".loader-progress-0 { width: 120px; height: 20px; background: linear-gradient(#000 0 0) 0/0% no-repeat #ddd; animation: l1-progress 2s infinite linear; } @keyframes l1-progress { 100% { background-size: 100%; } }"
+    },
+    {
+        "id": "progress",
+        "css": ".loader-progress-1 { width: 120px; height: 20px; border-radius: 20px; background: linear-gradient(orange 0 0) 0/0% no-repeat lightblue; animation: l2-steps 2s infinite steps(10); } @keyframes l2-steps { 100% { background-size: 110%; } }"
+    },
+    {
+        "id": "progress",
+        "css": ".loader-progress-2 { width: 120px; height: 22px; border-radius: 20px; color: #514b82; border: 2px solid; position: relative; } .loader-progress-2::before { content: \"\"; position: absolute; margin: 2px; inset: 0 100% 0 0; border-radius: inherit; background: currentColor; animation: l6-fill 2s infinite; } @keyframes l6-fill { 100% { inset: 0; } }"
+    },
+    {
+        "id": "wobbling",
+        "css": ".loader-wobbling-0 { width: 20px; aspect-ratio: 1; background: #25b09b; box-shadow: 0 0 60px 15px #25b09b; transform: translate(-80px); clip-path: inset(0); animation: l4-move 0.5s ease-in-out infinite alternate, l4-clip 1s ease-in-out infinite; } @keyframes l4-move { 100% { transform: translateX(80px); } } @keyframes l4-clip { 33% { clip-path: inset(0 0 0 -100px); } 50% { clip-path: inset(0 0 0 0); } 83% { clip-path: inset(0 -100px 0 0); } }"
+    },
+    {
+        "id": "wobbling",
+        "css": ".loader-wobbling-1 { width: 120px; height: 21px; background: linear-gradient(#000 0 0) left/10px 100% no-repeat #ddd; animation: l6-anim 1s infinite cubic-bezier(0,0.2,1,1); position: relative; } .loader-wobbling-1:before, .loader-wobbling-1:after { content: \"\"; position: absolute; left: 0; right: 0; height: 7px; background: linear-gradient(#000 0 0) left/10px 100% no-repeat #ddd; animation: inherit; } .loader-wobbling-1:before { top: 0; animation-timing-function: cubic-bezier(0,0,1,1); } .loader-wobbling-1:after { bottom: 0; animation-timing-function: cubic-bezier(0,0.4,1,1); } @keyframes l6-anim { 50% { background-position: right; } }"
+    },
+    {
+        "id": "wobbling",
+        "css": ".loader-wobbling-2 { height: 20px; width: 80px; transform: rotate(-30deg); background: radial-gradient(farthest-side,#f03355 90%,#0000) left bottom/15px 15px no-repeat #ddd; animation: l17-0 2s infinite alternate linear, l17-1 2s infinite cubic-bezier(.75,0,1,.6); } @keyframes l17-0 { 50% { transform: rotate(30deg); } } @keyframes l17-1 { 50% { background-position: right bottom; } }"
+    },
+    {
+        "id": "infinity",
+        "css": ".loader-infinity-0 { width: 60px; aspect-ratio: 1; --g: conic-gradient(from -90deg at 10px 10px,#1b2831 90deg,#0000 0); background: var(--g), var(--g), var(--g); background-size: 50% 50%; animation: l19 1s infinite; } @keyframes l19 { 0% { background-position: 0 0, 10px 10px, 20px 20px; } 33% { background-position: 10px 10px; } 66% { background-position: 0 20px, 10px 10px, 20px 0; } 100% { background-position: 0 0, 10px 10px, 20px 20px; } }"
+    },
+    {
+        "id": "infinity",
+        "css": ".loader-infinity-1 { width: calc(80px / cos(45deg)); height: 14px; background: repeating-linear-gradient(-45deg,#000 0 15px,#0000 0 20px) left/200% 100%; animation: l3 2s infinite linear; } @keyframes l3 { 100% { background-position: right; } }"
+    },
+    {
+        "id": "infinity",
+        "css": ".loader-infinity-2 { width: 60px; display: flex; align-items: flex-start; aspect-ratio: 1; } .loader-infinity-2:before, .loader-infinity-2:after { content: \"\"; flex: 1; aspect-ratio: 1; --g: conic-gradient(from -90deg at 10px 10px, #1b2831 90deg, #0000 0); background: var(--g), var(--g), var(--g); filter: drop-shadow(30px 30px 0 #1b2831); animation: l20 1s infinite; } .loader-infinity-2:after { transform: scaleX(-1); } @keyframes l20 { 0% { background-position: 0 0, 10px 10px, 20px 20px; } 33% { background-position: 10px 10px; } 66% { background-position: 0 20px, 10px 10px, 20px 0; } 100% { background-position: 0 0, 10px 10px, 20px 20px; } }"
+    },
+    {
+        "id": "wavy",
+        "css": ".loader-wavy-0 { display: inline-grid; } .loader-wavy-0:before, .loader-wavy-0:after { content: \"\"; grid-area: 1/1; height: 30px; aspect-ratio: 6; --c: #0000 64%,#000 66% 98%,#0000 101%; background: radial-gradient(35% 146% at 50% 159%,var(--c)) 0 0, radial-gradient(35% 146% at 50% -59%,var(--c)) 25% 100%; background-size: calc(100%/3) 50%; background-repeat: repeat-x; -webkit-mask: repeating-linear-gradient(90deg,#000 0 15%,#0000 0 50%) 0 0/200%; animation: l8 0.8s infinite linear; } .loader-wavy-0:after { scale: -1; } @keyframes l8 { to { -webkit-mask-position: -100% 0; } }"
+    },
+    {
+        "id": "wavy",
+        "css": ".loader-wavy-1 { display: inline-grid; padding: 5px; background: #fff; filter: blur(4px) contrast(12); } .loader-wavy-1:before, .loader-wavy-1:after { content: \"\"; grid-area: 1/1; height: 40px; aspect-ratio: 3; --c: #0000 64%,#000 66% 98%,#0000 101%; background: radial-gradient(35% 146% at 50% 159%,var(--c)) 0 0, radial-gradient(35% 146% at 50% -59%,var(--c)) 100% 100%; background-size: calc(200%/3) 50%; background-repeat: repeat-x; } .loader-wavy-1:before { -webkit-mask: repeating-linear-gradient(90deg,#000 0 8%,#0000 0 15%); } .loader-wavy-1:after { clip-path: inset(0 100% 0 0); animation: l13 1.5s infinite linear; } @keyframes l13 { 50% { clip-path: inset(0); } to { clip-path: inset(0 0 0 100%); } }"
+    },
+    {
+        "id": "wavy",
+        "css": ".loader-wavy-2 { display: inline-grid; padding: 5px; background: #fff; filter: blur(4px) contrast(12); } .loader-wavy-2:before { content: \"\"; height: 40px; aspect-ratio: 3; --c: #0000 64%,#000 66% 98%,#0000 101%; background: radial-gradient(35% 146% at 50% 159%,var(--c)) 0 0, radial-gradient(35% 146% at 50% -59%,var(--c)) 100% 100%; background-size: calc(200%/3) 50%; background-repeat: repeat-x; -webkit-mask: repeating-linear-gradient(90deg,#000 0 10%,#0000 0 20%); animation: l12 .8s infinite linear; } @keyframes l12 { to { background-position: -200% 0, -100% 100%; } }"
+    },
+    {
+  "id": "mechanic",
+  "css": ".loader-mechanic-0 { display: inline-grid; width: 80px; aspect-ratio: 1; border-image: conic-gradient(#474847 0 0) 1/7px/6px; } .loader-mechanic-0:before, .loader-mechanic-0:after { content: \"\"; grid-area: 1/1; } .loader-mechanic-0:before { clip-path: polygon(evenodd,0 0,100% 0,100% 100%,0 100%,0 0,100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%,100% 50%); background: #474847; } .loader-mechanic-0:after { margin: 12.5%; clip-path: polygon(100% 50%,78.19% 60.26%,88.3% 82.14%,65% 75.98%,58.68% 99.24%,44.79% 79.54%,25% 93.3%,27.02% 69.28%,3.02% 67.1%,20% 50%,3.02% 32.9%,27.02% 30.72%,25% 6.7%,44.79% 20.46%,58.68% 0.76%,65% 24.02%,88.3% 17.86%,78.19% 39.74%); background: #C0C0C0; transform: rotate(0turn) translate(15.625%) rotate(0turn); animation: l1 2s linear infinite; } @keyframes l1 { to { transform: rotate(1turn) translate(15.625%) rotate(-1.333turn); } }"
+},
+{
+  "id": "mechanic",
+  "css": ".loader-mechanic-1 { display: inline-grid; width: 80px; aspect-ratio: 1; overflow: hidden; background: conic-gradient(from -34deg at 50% 99%,#0000, #91492A 2deg 65deg,#0000 68deg) -5% 0%/20% 27% repeat-x, conic-gradient(from 146deg at 50% 1%,#0000, #91492A 2deg 65deg,#0000 68deg) -5% 100%/20% 27% repeat-x; animation: l8-0 2s linear infinite; } .loader-mechanic-1:before { content: \"\"; margin: 12.5%; clip-path: polygon(100% 50%,78.19% 60.26%,88.3% 82.14%,65% 75.98%,58.68% 99.24%,44.79% 79.54%,25% 93.3%,27.02% 69.28%,3.02% 67.1%,20% 50%,3.02% 32.9%,27.02% 30.72%,25% 6.7%,44.79% 20.46%,58.68% 0.76%,65% 24.02%,88.3% 17.86%,78.19% 39.74%); background: #CF6F46; animation: inherit; animation: l8-1 4s linear infinite; translate: -135% 0; } @keyframes l8-0 { to { background-position: 245% 0%,-5% 100%; } } @keyframes l8-1 { to { rotate: 400deg; translate: 135% 0; } }"
+},
+{
+  "id": "mechanic",
+  "css": ".loader-mechanic-2 { display: inline-grid; width: 80px; aspect-ratio: 1; animation: l6-0 .5s linear infinite; background: conic-gradient(from -34deg at 50% 99%,#0000, #91492A 2deg 65deg,#0000 68deg) -6% 0%/20% 27% repeat-x, conic-gradient(from 146deg at 50% 1%,#0000, #91492A 2deg 65deg,#0000 68deg) -5% 100%/20% 27% repeat-x; } .loader-mechanic-2:before { content: \"\"; animation: inherit; animation-name: l6-1; margin: 12.5%; clip-path: polygon(100% 50%,78.19% 60.26%,88.3% 82.14%,65% 75.98%,58.68% 99.24%,44.79% 79.54%,25% 93.3%,27.02% 69.28%,3.02% 67.1%,20% 50%,3.02% 32.9%,27.02% 30.72%,25% 6.7%,44.79% 20.46%,58.68% 0.76%,65% 24.02%,88.3% 17.86%,78.19% 39.74%); background: #CF6F46; } @keyframes l6-0 { to { background-position: -31% 0%, 20% 100%; } } @keyframes l6-1 { to { rotate: -40deg; } }"
 }
+
 
 
 

@@ -126,7 +126,7 @@ const Loaders = () => {
                 {filteredLoaders.map((loader, index) => {
                     const uniqueClass = `loader-${type}-${index}`;
                     return (
-                        <div key={index} className="loader-btn">
+                        <div key={index} className={`loader-btn ${type === '3-D' ? "bg-3d" : ""}`}>
                             <style>{loader.css}</style>
 
                             <button
