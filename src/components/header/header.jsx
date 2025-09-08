@@ -1,6 +1,7 @@
 import React from 'react';
 import "./header.scss";
 import { Link } from 'react-router-dom';
+import loaders from "../../assets/loaders.json"
 
 const Header = () => {
     return (
@@ -14,7 +15,7 @@ const Header = () => {
                     </div>
                     <div className="loader-text">
                         <span>Loaders</span>
-                        <span>600+ single element loaders</span>
+                        <span>{loaders.length}+ single element loaders</span>
                     </div>
                 </Link>
             </div>
