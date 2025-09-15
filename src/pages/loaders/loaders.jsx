@@ -149,8 +149,8 @@ const Loaders = () => {
 
             <div className="ad1-block">
                 <YandexAd
-                    blockId="R-A-17095066-3"
-                    renderTo="yandex_rtb_R-A-17095066-3"
+                    blockId="R-A-17245616-1"
+                    renderTo="yandex_rtb_R-A-17245616-1"
                 />
             </div>
         </div>
