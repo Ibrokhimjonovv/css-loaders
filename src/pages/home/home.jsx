@@ -49,7 +49,7 @@ const Home = () => {
             </div>
 
             <div className="ad1-block">
-                <YandexAd blockId="R-A-17095066-1"/>
+                <YandexAd blockId="R-A-17245616-2" renderTo="yandex_rtb_R-A-17245616-2"/>
             </div>
         </div>
     )

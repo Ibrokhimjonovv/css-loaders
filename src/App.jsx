@@ -9,7 +9,11 @@ import Loaders from './pages/loaders/loaders';
 function App() {
   return (
     <BrowserRouter>
-    <YandexAd blockId="R-A-17095066-2" platform="desktop"/>
+      <YandexAd blockId="R-A-17245616-3" type="floorAd" platform="touch" />
+      <YandexAd blockId="R-A-17245616-4" type="floorAd" platform="desktop" />
+
+      <YandexAd blockId="R-A-17245616-5" type="topAd" />
+      <YandexAd blockId="R-A-17245616-6" type="fullscreen" platform="desktop" />
       <div className="container">
         <div className="for-left-menu">
           <LeftMenu />
@@ -18,7 +22,7 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/:type" element={<Loaders />}/>
+            <Route path="/:type" element={<Loaders />} />
             {/* {routes.map(({ path, element }, index) => (
               <Route key={index} path={path} element={element} />
             ))} */}
