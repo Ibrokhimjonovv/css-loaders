@@ -3,12 +3,17 @@ import "./loaders.scss";
 import YandexAd from "../../components/yandexAd/ad";
 import { useParams } from "react-router-dom";
 import loaders from "../../assets/loaders.json"
+import NotFound from "../not-found/not-found";
 
 
 const Loaders = () => {
     const [copiedId, setCopiedId] = useState(null);
     const { type } = useParams();
     const filteredLoaders = loaders.filter((l) => l.id === type);
+
+    if (filteredLoaders.length === 0) {
+        return <NotFound />;
+    }
 
     document.title = `The ${type.charAt(0).toUpperCase() + type.slice(1)}
  CSS Loaders Collection`;
