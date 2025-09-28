@@ -1,0 +1,28 @@
+/* HTML: <div class="loader"></div> */
+.loader {
+  display: inline-flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+  height: calc(100vh - 100px);
+}
+.loader:before,
+.loader:after {
+  content: "";
+  height: 20px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(farthest-side,#000 95%,#0000) 50%/8px 8px no-repeat
+    #fff;
+  aspect-ratio: 1;
+  animation: l10 1.5s infinite alternate;
+}
+.loader:after {
+  --s:-1;
+}
+@keyframes l10 {
+  0% ,20% {transform:scaleX(var(--s,1)) rotate(0deg) ;clip-path:inset(0)}
+  60%,100%{transform:scaleX(var(--s,1)) rotate(30deg);clip-path:inset(40% 0 0)}
+}

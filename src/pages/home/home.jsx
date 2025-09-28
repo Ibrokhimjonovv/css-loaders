@@ -1,16 +1,38 @@
 import React, { useState, useEffect } from 'react';
 import "./home.scss";
-import YandexAd from '../../components/yandexAd/ad';
-import loaders from "../../assets/loaders.json";
+import PageLoader from '../../components/loaders/loaders';
+
+const API_BASE = "https://impulsee.pythonanywhere.com/api"; // Django API manzilingiz
 
 const Home = () => {
     const [copyText, setCopyText] = useState(false);
     const [randomLoader, setRandomLoader] = useState(null);
+    const [loaders, setLoaders] = useState([]);
+    const [loading, setLoading] = useState(true); // loading state
 
-    // Sahifa ochilganda random loader tanlanadi
+    // API'dan loaderlarni olish
     useEffect(() => {
-        const randomIndex = Math.floor(Math.random() * loaders.length);
-        setRandomLoader(loaders[randomIndex]);
+        const fetchLoaders = async () => {
+            setLoading(true);
+            try {
+                const res = await fetch(`${API_BASE}/loaders/`);
+                if (!res.ok) throw new Error("Failed to fetch loaders");
+                const data = await res.json();
+                setLoaders(data);
+
+                // Random loader tanlash
+                if (data.length > 0) {
+                    const randomIndex = Math.floor(Math.random() * data.length);
+                    setRandomLoader(data[randomIndex]);
+                }
+            } catch (err) {
+                console.error(err);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchLoaders();
     }, []);
 
     const handleCopy = () => {
@@ -20,6 +42,14 @@ const Home = () => {
             setTimeout(() => setCopyText(false), 1500);
         });
     };
+
+    if (loading) {
+        return (
+            <div id="home">
+                <PageLoader />
+            </div>
+        );
+    }
 
     return (
         <div id='home'>
@@ -33,7 +63,7 @@ const Home = () => {
             <div className="random-css-loader">
                 <p id='sss'>Don't know which loader to use? Here is one for you 👇</p>
 
-                <div className="random-loader-case">
+                <div className={`random-loader-case ${randomLoader?.is_light ? "bg-3d" : ""}`}>
                     <button className="random-copy-btn" onClick={handleCopy}>
                         {copyText ? "Copied!" : "Copy the CSS"}
                     </button>
@@ -49,7 +79,6 @@ const Home = () => {
             </div>
 
             <div className="ad1-block">
-                <YandexAd blockId="R-A-17245616-2" renderTo="yandex_rtb_R-A-17245616-2"/>
             </div>
         </div>
     )

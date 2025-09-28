@@ -17,6 +17,10 @@
       .lets-text {
         color: #c2c7d0;
         margin-top: 20px;
+
+        span {
+          text-transform: uppercase;
+        }
       }
 
       .code {
@@ -119,8 +123,6 @@
 
   .ad1-block {
     width: 100%;
-    // background-color: red;
-    min-height: 200px;
     padding: 10px;
   }
 }

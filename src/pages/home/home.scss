@@ -31,12 +31,16 @@
         justify-content: center;
         width: 300px;
         height: 200px;
-        background-color: #1b2832;
+        background-color: #eee;
         border: none;
         margin-top: 20px;
         border-radius: 5px;
         position: relative;
         cursor: pointer;
+
+        &.bg-3d {
+          background-color: #1b2832;
+        }
 
         &:hover {
             .random-copy-btn {
@@ -58,45 +62,10 @@
             opacity: 0;
         }
     }
-
-    /* HTML: <div class="loader"></div> */
-    .random-loader-home,
-    .random-loader-home:before,
-    .random-loader-home:after {
-      width: 35px;
-      aspect-ratio: 1;
-      box-shadow: 0 0 0 3px inset #fff;
-      position: relative;
-      animation: l6 1.5s infinite 0.5s;
-    }
-    .random-loader-home:before,
-    .random-loader-home:after {
-      content: "";
-      position: absolute;
-      left: calc(100% + 5px);
-      animation-delay: 1s;
-    }
-    .random-loader-home:after {
-      left: -40px;
-      animation-delay: 0s;
-    }
-    @keyframes l6 {
-      0%,
-      55%,
-      100% {
-        border-radius: 0;
-      }
-      20%,
-      30% {
-        border-radius: 50%;
-      }
-    }
   }
 
   .ad1-block {
     width: 100%;
-    // background-color: red;
-    min-height: 200px;
     padding: 10px;
   }
 }
